@@ -1,5 +1,5 @@
 {
-  "city": { "id": 4371582, "name": "Towson", "coord": { "lon": -76.6019, "lat": 39.4015 }, "country": "US", "population": 55197, "timezone": -18000 },
+  "city": { "id": 4371582, "name": "Towson", "country": "US", "population": 55197, "timezone": -18000 },
   "cod": "200",
   "message": 18.6136118,
   "cnt": 6,
