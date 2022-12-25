@@ -15,7 +15,7 @@ Make sure you have [Node.js](http://nodejs.org/) and the [Expo](https://docs.exp
 ```sh
 $ git clone https://github.com/Tyrone-Ward/weatherAppUI.git
 $ cd weatherAppUI
-$ expo install
+$ npm install
 ```
 
 <br>
