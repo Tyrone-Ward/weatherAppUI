@@ -2,7 +2,11 @@ import { StyleSheet, Text, View, useColorScheme } from 'react-native'
 import React from 'react'
 import { useTheme, DefaultTheme, DarkTheme } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
+import { iconMap } from '../components/WeatherIcon'
+import WeatherIcon from '../components/WeatherIcon'
 import weatherData from '../Data/WeatherData'
+const DailyWeatherData = require('../Data/daily.json')
+import Weekday from '../components/Weekday'
 
 const MainScreen = () => {
   const scheme = useColorScheme()
@@ -42,34 +46,46 @@ const MainScreen = () => {
       </View>
       <View style={styles.forecast}>
         <View style={{ alignItems: 'center' }}>
-          <Text style={[styles.forecastText, { color: colors.text }]}>{weatherData.forecast[0].day}</Text>
-          <Ionicons name={weatherData.forecast[0].icon} size={32} color={colors.text} />
-          <Text style={{ color: colors.text }}>{weatherData.forecast[0].temp}</Text>
+          <Text style={[styles.forecastText, { color: colors.text }]}>
+            <Weekday date={DailyWeatherData.list[0].dt} />
+          </Text>
+          <Ionicons name={iconMap[DailyWeatherData.list[0].weather[0].icon]} size={32} color={colors.text} />
+          <Text style={{ color: colors.text }}>{DailyWeatherData.list[0].temp.day.toFixed()}°</Text>
         </View>
         <View style={{ alignItems: 'center' }}>
-          <Text style={[styles.forecastText, { color: colors.text }]}>{weatherData.forecast[1].day}</Text>
-          <Ionicons name={weatherData.forecast[1].icon} size={32} color={colors.text} />
-          <Text style={{ color: colors.text }}>{weatherData.forecast[1].temp}</Text>
+          <Text style={[styles.forecastText, { color: colors.text }]}>
+            <Weekday date={DailyWeatherData.list[1].dt} />
+          </Text>
+          <Ionicons name={iconMap[DailyWeatherData.list[1].weather[0].icon]} size={32} color={colors.text} />
+          <Text style={{ color: colors.text }}>{DailyWeatherData.list[1].temp.day.toFixed()}°</Text>
         </View>
         <View style={{ alignItems: 'center' }}>
-          <Text style={[styles.forecastText, { color: colors.text }]}>{weatherData.forecast[2].day}</Text>
-          <Ionicons name={weatherData.forecast[2].icon} size={32} color={colors.text} />
-          <Text style={{ color: colors.text }}>{weatherData.forecast[2].temp}</Text>
+          <Text style={[styles.forecastText, { color: colors.text }]}>
+            <Weekday date={DailyWeatherData.list[2].dt} />
+          </Text>
+          <Ionicons name={iconMap[DailyWeatherData.list[2].weather[0].icon]} size={32} color={colors.text} />
+          <Text style={{ color: colors.text }}>{DailyWeatherData.list[2].temp.day.toFixed()}°</Text>
         </View>
         <View style={{ alignItems: 'center' }}>
-          <Text style={[styles.forecastText, { color: colors.text }]}>{weatherData.forecast[3].day}</Text>
-          <Ionicons name={weatherData.forecast[3].icon} size={32} color={colors.text} />
-          <Text style={{ color: colors.text }}>{weatherData.forecast[3].temp}</Text>
+          <Text style={[styles.forecastText, { color: colors.text }]}>
+            <Weekday date={DailyWeatherData.list[3].dt} />
+          </Text>
+          <Ionicons name={iconMap[DailyWeatherData.list[3].weather[0].icon]} size={32} color={colors.text} />
+          <Text style={{ color: colors.text }}>{DailyWeatherData.list[3].temp.day.toFixed()}°</Text>
         </View>
         <View style={{ alignItems: 'center' }}>
-          <Text style={[styles.forecastText, { color: colors.text }]}>{weatherData.forecast[4].day}</Text>
-          <Ionicons name={weatherData.forecast[4].icon} size={32} color={colors.text} />
-          <Text style={{ color: colors.text }}>{weatherData.forecast[4].temp}</Text>
+          <Text style={[styles.forecastText, { color: colors.text }]}>
+            <Weekday date={DailyWeatherData.list[4].dt} />
+          </Text>
+          <Ionicons name={iconMap[DailyWeatherData.list[4].weather[0].icon]} size={32} color={colors.text} />
+          <Text style={{ color: colors.text }}>{DailyWeatherData.list[4].temp.day.toFixed()}°</Text>
         </View>
         <View style={{ alignItems: 'center' }}>
-          <Text style={[styles.forecastText, { color: colors.text }]}>{weatherData.forecast[5].day}</Text>
-          <Ionicons name={weatherData.forecast[5].icon} size={32} color={colors.text} />
-          <Text style={{ color: colors.text }}>{weatherData.forecast[5].temp}</Text>
+          <Text style={[styles.forecastText, { color: colors.text }]}>
+            <Weekday date={DailyWeatherData.list[5].dt} />
+          </Text>
+          <Ionicons name={iconMap[DailyWeatherData.list[5].weather[0].icon]} size={32} color={colors.text} />
+          <Text style={{ color: colors.text }}>{DailyWeatherData.list[5].temp.day.toFixed()}°</Text>
         </View>
       </View>
     </View>

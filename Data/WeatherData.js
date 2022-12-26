@@ -11,7 +11,7 @@ const weatherData = {
   forecast: {
     0: {
       day: 'THU',
-      icon: 'ios-rainy-outline',
+      icon: '03d',
       temp: '16°'
     },
     1: {
